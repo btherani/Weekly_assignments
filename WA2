@@ -1,0 +1,32 @@
+[btherani@colossus ~]$ pwd
+/home/campus29/btherani
+[btherani@colossus ~]$ ls
+A.thaliana_ch4.gbk       Desktop      genbank_files            IE                    My Music      Zotero
+BL5300                   desktop.ini  genbank_files.tar.gz     in_class_assignments  My Pictures
+CmapToolsLogs            Downloads    hemoglobin_taxonomy.txt  MATLAB                My Videos
+Custom Office Templates  edirect      HomeMigration.txt        My Cmaps              $RECYCLE.BIN
+[btherani@colossus ~]$ cd BL5300/
+[btherani@colossus BL5300]$ mkdir Weekly_assignment
+[btherani@colossus BL5300]$ ls
+new.file  new.file.txt  Weekly_assignment
+[btherani@colossus BL5300]$ cd Weekly_assignment/
+[btherani@colossus Weekly_assignment]$ ls
+[btherani@colossus Weekly_assignment]$ efetch -db=nucleotide -id=NC_008535.1 -format=gb>coffee_chloroplast.gbk
+[btherani@colossus Weekly_assignment]$ ls
+coffee_chloroplast.gbk
+[btherani@colossus Weekly_assignment]$ wget https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/scripts/genbank_to_fasta.py
+--2019-09-23 23:06:47--  https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/scripts/genbank_to_fasta.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.184.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.184.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 719 [text/plain]
+Saving to: ‘genbank_to_fasta.py’
+
+100%[===================================================================================>] 719         --.-K/s   in 0s
+
+2019-09-23 23:06:47 (35.1 MB/s) - ‘genbank_to_fasta.py’ saved [719/719]
+
+[btherani@colossus Weekly_assignment]$ python genbank_to_fasta.py coffee_chloroplast.gbk coffee_chloroplast.fasta
+[btherani@colossus Weekly_assignment]$ ls
+coffee_chloroplast.fasta  coffee_chloroplast.gbk  genbank_to_fasta.py
+[btherani@colossus Weekly_assignment]$
