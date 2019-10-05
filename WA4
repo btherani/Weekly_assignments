@@ -1,0 +1,495 @@
+(base) [btherani@colossus ~]$ cd BL5300/
+(base) [btherani@colossus BL5300]$ ls
+new.file  new.file.txt  Weekly_assignment
+(base) [btherani@colossus BL5300]$ mkdir Weekly_assignment_4
+(base) [btherani@colossus BL5300]$ ls
+new.file  new.file.txt  Weekly_assignment  Weekly_assignment_4
+(base) [btherani@colossus BL5300]$ cd Weekly_assignment_4/
+(base) [btherani@colossus Weekly_assignment_4]$ efetch -db=sequences -id=CP000141.1 -format=fasta>C_hydro.fasta
+Can't locate HTML/Entities.pm in @INC (you may need to install the HTML::Entities module) (@INC contains: /home/campus29/btherani/edirect/aux/lib/perl5/x86_64-l                                                   inux-thread-multi /home/campus29/btherani/edirect/aux/lib/perl5 /home/campus29/b                                                   therani/miniconda3/lib/site_perl/5.26.2/x86_64-linux-thread-multi /home/campus29                                                   /btherani/miniconda3/lib/site_perl/5.26.2 /home/campus29/btherani/miniconda3/lib                                                   /5.26.2/x86_64-linux-thread-multi /home/campus29/btherani/miniconda3/lib/5.26.2                                                    .) at /home/campus29/btherani/edirect/edirect.pl line 71.
+BEGIN failed--compilation aborted at /home/campus29/btherani/edirect/edirect.plline 71.
+(base) [btherani@colossus Weekly_assignment_4]$ conda install entrez-direct
+Collecting package metadata (current_repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/campus29/btherani/miniconda3
+
+  added / updated specs:
+    - entrez-direct
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    entrez-direct-11.0         |          pl526_0         4.1 MB  bioconda
+    expat-2.2.6                |       he6710b0_0         146 KB
+    perl-app-cpanminus-1.7044  |          pl526_1         234 KB  bioconda
+    perl-base-2.23             |          pl526_1          10 KB  bioconda
+    perl-business-isbn-3.004   |          pl526_0          15 KB  bioconda
+    perl-business-isbn-data-20140910.003|          pl526_0          15 KB  bioconda
+    perl-carp-1.38             |          pl526_3          15 KB  bioconda
+    perl-compress-raw-zlib-2.087|  pl526hc9558a2_0          72 KB  bioconda
+    perl-constant-1.33         |          pl526_1          10 KB  bioconda
+    perl-data-dumper-2.173     |          pl526_0          35 KB  bioconda
+    perl-digest-hmac-1.03      |          pl526_3           9 KB  bioconda
+    perl-digest-md5-2.55       |          pl526_0          18 KB  bioconda
+    perl-encode-2.88           |          pl526_1         2.1 MB  bioconda
+    perl-encode-locale-1.05    |          pl526_6          11 KB  bioconda
+    perl-exporter-5.72         |          pl526_1          13 KB  bioconda
+    perl-extutils-makemaker-7.36|          pl526_1         153 KB  bioconda
+    perl-file-listing-6.04     |          pl526_1           9 KB  bioconda
+    perl-file-path-2.16        |          pl526_0          17 KB  bioconda
+    perl-file-temp-0.2304      |          pl526_2          26 KB  bioconda
+    perl-html-parser-3.72      |  pl526h6bb024c_5          66 KB  bioconda
+    perl-html-tagset-3.20      |          pl526_3          12 KB  bioconda
+    perl-html-tree-5.07        |          pl526_1         129 KB  bioconda
+    perl-http-cookies-6.04     |          pl526_0          19 KB  bioconda
+    perl-http-daemon-6.01      |          pl526_1          14 KB  bioconda
+    perl-http-date-6.02        |          pl526_3          10 KB  bioconda
+    perl-http-message-6.18     |          pl526_0          51 KB  bioconda
+    perl-http-negotiate-6.01   |          pl526_3          13 KB  bioconda
+    perl-io-html-1.001         |          pl526_2          13 KB  bioconda
+    perl-io-socket-ssl-2.066   |          pl526_0         151 KB  bioconda
+    perl-libwww-perl-6.39      |          pl526_0          94 KB  bioconda
+    perl-lwp-mediatypes-6.04   |          pl526_0          22 KB  bioconda
+    perl-lwp-protocol-https-6.07|          pl526_4           9 KB  bioconda
+    perl-mime-base64-3.15      |          pl526_1          15 KB  bioconda
+    perl-mozilla-ca-20180117   |          pl526_1         140 KB  bioconda
+    perl-net-http-6.19         |          pl526_0          19 KB  bioconda
+    perl-net-ssleay-1.88       |  pl526h90d6eec_0         289 KB  bioconda
+    perl-ntlm-1.09             |          pl526_4          15 KB  bioconda
+    perl-parent-0.236          |          pl526_1           5 KB  bioconda
+    perl-socket-2.027          |          pl526_1          31 KB  bioconda
+    perl-storable-3.15         |  pl526h14c3975_0          63 KB  bioconda
+    perl-test-requiresinternet-0.05|          pl526_0           7 KB  bioconda
+    perl-time-local-1.28       |          pl526_1          10 KB  bioconda
+    perl-try-tiny-0.30         |          pl526_1          17 KB  bioconda
+    perl-uri-1.76              |          pl526_0          55 KB  bioconda
+    perl-www-robotrules-6.02   |          pl526_3          12 KB  bioconda
+    perl-xml-namespacesupport-1.12|          pl526_0          11 KB  bioconda
+    perl-xml-parser-2.44       |  pl526h4e0c4b3_7         165 KB  bioconda
+    perl-xml-sax-1.02          |          pl526_0          36 KB  bioconda
+    perl-xml-sax-base-1.09     |          pl526_0          19 KB  bioconda
+    perl-xml-sax-expat-0.51    |          pl526_3          10 KB  bioconda
+    perl-xml-simple-2.25       |          pl526_1          48 KB  bioconda
+    perl-xsloader-0.24         |          pl526_0           8 KB  bioconda
+    ------------------------------------------------------------
+                                           Total:         8.6 MB
+
+The following NEW packages will be INSTALLED:
+
+  entrez-direct      bioconda/linux-64::entrez-direct-11.0-pl526_0
+  expat              pkgs/main/linux-64::expat-2.2.6-he6710b0_0
+  perl-app-cpanminus bioconda/linux-64::perl-app-cpanminus-1.7044-pl526_1
+  perl-base          bioconda/linux-64::perl-base-2.23-pl526_1
+  perl-business-isbn bioconda/linux-64::perl-business-isbn-3.004-pl526_0
+  perl-business-isb~ bioconda/linux-64::perl-business-isbn-data-20140910.003-pl526_0
+  perl-carp          bioconda/linux-64::perl-carp-1.38-pl526_3
+  perl-compress-raw~ bioconda/linux-64::perl-compress-raw-zlib-2.087-pl526hc9558a2_0
+  perl-constant      bioconda/linux-64::perl-constant-1.33-pl526_1
+  perl-data-dumper   bioconda/linux-64::perl-data-dumper-2.173-pl526_0
+  perl-digest-hmac   bioconda/linux-64::perl-digest-hmac-1.03-pl526_3
+  perl-digest-md5    bioconda/linux-64::perl-digest-md5-2.55-pl526_0
+  perl-encode        bioconda/linux-64::perl-encode-2.88-pl526_1
+  perl-encode-locale bioconda/linux-64::perl-encode-locale-1.05-pl526_6
+  perl-exporter      bioconda/linux-64::perl-exporter-5.72-pl526_1
+  perl-extutils-mak~ bioconda/linux-64::perl-extutils-makemaker-7.36-pl526_1
+  perl-file-listing  bioconda/linux-64::perl-file-listing-6.04-pl526_1
+  perl-file-path     bioconda/linux-64::perl-file-path-2.16-pl526_0
+  perl-file-temp     bioconda/linux-64::perl-file-temp-0.2304-pl526_2
+  perl-html-parser   bioconda/linux-64::perl-html-parser-3.72-pl526h6bb024c_5
+  perl-html-tagset   bioconda/linux-64::perl-html-tagset-3.20-pl526_3
+  perl-html-tree     bioconda/linux-64::perl-html-tree-5.07-pl526_1
+  perl-http-cookies  bioconda/linux-64::perl-http-cookies-6.04-pl526_0
+  perl-http-daemon   bioconda/linux-64::perl-http-daemon-6.01-pl526_1
+  perl-http-date     bioconda/linux-64::perl-http-date-6.02-pl526_3
+  perl-http-message  bioconda/linux-64::perl-http-message-6.18-pl526_0
+  perl-http-negotia~ bioconda/linux-64::perl-http-negotiate-6.01-pl526_3
+  perl-io-html       bioconda/linux-64::perl-io-html-1.001-pl526_2
+  perl-io-socket-ssl bioconda/linux-64::perl-io-socket-ssl-2.066-pl526_0
+  perl-libwww-perl   bioconda/noarch::perl-libwww-perl-6.39-pl526_0
+  perl-lwp-mediatyp~ bioconda/linux-64::perl-lwp-mediatypes-6.04-pl526_0
+  perl-lwp-protocol~ bioconda/linux-64::perl-lwp-protocol-https-6.07-pl526_4
+  perl-mime-base64   bioconda/linux-64::perl-mime-base64-3.15-pl526_1
+  perl-mozilla-ca    bioconda/linux-64::perl-mozilla-ca-20180117-pl526_1
+  perl-net-http      bioconda/noarch::perl-net-http-6.19-pl526_0
+  perl-net-ssleay    bioconda/linux-64::perl-net-ssleay-1.88-pl526h90d6eec_0
+  perl-ntlm          bioconda/linux-64::perl-ntlm-1.09-pl526_4
+  perl-parent        bioconda/linux-64::perl-parent-0.236-pl526_1
+  perl-socket        bioconda/linux-64::perl-socket-2.027-pl526_1
+  perl-storable      bioconda/linux-64::perl-storable-3.15-pl526h14c3975_0
+  perl-test-require~ bioconda/linux-64::perl-test-requiresinternet-0.05-pl526_0
+  perl-time-local    bioconda/linux-64::perl-time-local-1.28-pl526_1
+  perl-try-tiny      bioconda/linux-64::perl-try-tiny-0.30-pl526_1
+  perl-uri           bioconda/linux-64::perl-uri-1.76-pl526_0
+  perl-www-robotrul~ bioconda/linux-64::perl-www-robotrules-6.02-pl526_3
+  perl-xml-namespac~ bioconda/linux-64::perl-xml-namespacesupport-1.12-pl526_0
+  perl-xml-parser    bioconda/linux-64::perl-xml-parser-2.44-pl526h4e0c4b3_7
+  perl-xml-sax       bioconda/noarch::perl-xml-sax-1.02-pl526_0
+  perl-xml-sax-base  bioconda/linux-64::perl-xml-sax-base-1.09-pl526_0
+  perl-xml-sax-expat bioconda/linux-64::perl-xml-sax-expat-0.51-pl526_3
+  perl-xml-simple    bioconda/linux-64::perl-xml-simple-2.25-pl526_1
+  perl-xsloader      bioconda/linux-64::perl-xsloader-0.24-pl526_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+perl-digest-hmac-1.0 | 9 KB      | ##################################### | 100%
+perl-html-tree-5.07  | 129 KB    | ##################################### | 100%
+perl-business-isbn-d | 15 KB     | ##################################### | 100%
+perl-file-listing-6. | 9 KB      | ##################################### | 100%
+perl-http-negotiate- | 13 KB     | ##################################### | 100%
+perl-file-temp-0.230 | 26 KB     | ##################################### | 100%
+perl-socket-2.027    | 31 KB     | ##################################### | 100%
+perl-business-isbn-3 | 15 KB     | ##################################### | 100%
+perl-xml-sax-1.02    | 36 KB     | ##################################### | 100%
+perl-uri-1.76        | 55 KB     | ##################################### | 100%
+entrez-direct-11.0   | 4.1 MB    | ##################################### | 100%
+perl-extutils-makema | 153 KB    | ##################################### | 100%
+perl-exporter-5.72   | 13 KB     | ##################################### | 100%
+perl-parent-0.236    | 5 KB      | ##################################### | 100%
+expat-2.2.6          | 146 KB    | ##################################### | 100%
+perl-encode-2.88     | 2.1 MB    | ##################################### | 100%
+perl-html-parser-3.7 | 66 KB     | ##################################### | 100%
+perl-base-2.23       | 10 KB     | ##################################### | 100%
+perl-xml-parser-2.44 | 165 KB    | ##################################### | 100%
+perl-xml-simple-2.25 | 48 KB     | ##################################### | 100%
+perl-html-tagset-3.2 | 12 KB     | ##################################### | 100%
+perl-file-path-2.16  | 17 KB     | ##################################### | 100%
+perl-io-html-1.001   | 13 KB     | ##################################### | 100%
+perl-test-requiresin | 7 KB      | ##################################### | 100%
+perl-mime-base64-3.1 | 15 KB     | ##################################### | 100%
+perl-http-cookies-6. | 19 KB     | ##################################### | 100%
+perl-app-cpanminus-1 | 234 KB    | ##################################### | 100%
+perl-time-local-1.28 | 10 KB     | ##################################### | 100%
+perl-lwp-protocol-ht | 9 KB      | ##################################### | 100%
+perl-constant-1.33   | 10 KB     | ##################################### | 100%
+perl-try-tiny-0.30   | 17 KB     | ##################################### | 100%
+perl-storable-3.15   | 63 KB     | ##################################### | 100%
+perl-xml-sax-expat-0 | 10 KB     | ##################################### | 100%
+perl-www-robotrules- | 12 KB     | ##################################### | 100%
+perl-http-daemon-6.0 | 14 KB     | ##################################### | 100%
+perl-net-http-6.19   | 19 KB     | ##################################### | 100%
+perl-xml-namespacesu | 11 KB     | ##################################### | 100%
+perl-io-socket-ssl-2 | 151 KB    | ##################################### | 100%
+perl-http-message-6. | 51 KB     | ##################################### | 100%
+perl-data-dumper-2.1 | 35 KB     | ##################################### | 100%
+perl-lwp-mediatypes- | 22 KB     | ##################################### | 100%
+perl-net-ssleay-1.88 | 289 KB    | ##################################### | 100%
+perl-xsloader-0.24   | 8 KB      | ##################################### | 100%
+perl-mozilla-ca-2018 | 140 KB    | ##################################### | 100%
+perl-xml-sax-base-1. | 19 KB     | ##################################### | 100%
+perl-libwww-perl-6.3 | 94 KB     | ##################################### | 100%
+perl-ntlm-1.09       | 15 KB     | ##################################### | 100%
+perl-encode-locale-1 | 11 KB     | ##################################### | 100%
+perl-http-date-6.02  | 10 KB     | ##################################### | 100%
+perl-compress-raw-zl | 72 KB     | ##################################### | 100%
+perl-carp-1.38       | 15 KB     | ##################################### | 100%
+perl-digest-md5-2.55 | 18 KB     | ##################################### | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(base) [btherani@colossus Weekly_assignment_4]$ efetch -db=sequences -id=CP000141.1 -format=fasta>C_hydro.fasta
+(base) [btherani@colossus Weekly_assignment_4]$ ls
+C_hydro.fasta
+(base) [btherani@colossus Weekly_assignment_4]$ gdown.pl https://drive.google.com/file/d/1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS/edit C_ferri_R1.fastq.gz
+Cannot open cookies file ‘gdown.cookie.temp’: No such file or directory
+--2019-10-05 14:44:13--  https://docs.google.com/uc?id=1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS&export=download
+Resolving docs.google.com (docs.google.com)... 216.58.192.238, 2607:f8b0:4009:80f::200e
+Connecting to docs.google.com (docs.google.com)|216.58.192.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘C_ferri_R1.fastq.gz’
+
+     0K                                     20.1M=0s
+
+2019-10-05 14:44:13 (20.1 MB/s) - ‘C_ferri_R1.fastq.gz’ saved [3260]
+
+--2019-10-05 14:44:13--  https://docs.google.com/uc?export=download&confirm=dMN7&id=1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS
+Resolving docs.google.com (docs.google.com)... 216.58.192.238, 2607:f8b0:4009:80f::200e
+Connecting to docs.google.com (docs.google.com)|216.58.192.238|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://doc-0k-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/51oankv94lg5kieecvfu4lu4m01lja5a/1570298400000/00987064705                                                   613225626/*/1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS?e=download [following]
+Warning: wildcards not supported in HTTP.
+--2019-10-05 14:44:14--  https://doc-0k-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/51oankv94lg5kieecvfu4lu4m01lja5a/1570298400                                                   000/00987064705613225626/*/1PWWO5wVRRThLBXXEZjyWZHIb9udVcnCS?e=download
+Resolving doc-0k-40-docs.googleusercontent.com (doc-0k-40-docs.googleusercontent.com)... 172.217.6.1, 2607:f8b0:4009:811::2001
+Connecting to doc-0k-40-docs.googleusercontent.com (doc-0k-40-docs.googleusercontent.com)|172.217.6.1|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/octet-stream]
+Saving to: ‘C_ferri_R1.fastq.gz’
+
+     0K ........ ........ ........ ........ 12.1M
+ 32768K ........ ........ ........ ........ 11.9M
+ 65536K ........ ........ ........ ........ 12.3M
+ 98304K ........ ........ ........ ........ 11.3M
+131072K ........ ........ ........ ........ 12.3M
+163840K ........ ........ ........ ........ 12.2M
+196608K ........ ........ .......           12.1M=18s
+
+2019-10-05 14:44:32 (12.0 MB/s) - ‘C_ferri_R1.fastq.gz’ saved [225555584]
+
+(base) [btherani@colossus Weekly_assignment_4]$ gdown.pl https://drive.google.com/file/d/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK/edit C_ferri_R2.fastq.gz
+Cannot open cookies file ‘gdown.cookie.temp’: No such file or directory
+--2019-10-05 14:46:13--  https://docs.google.com/uc?id=1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK&export=download
+Resolving docs.google.com (docs.google.com)... 216.58.192.238, 2607:f8b0:4009:80f::200e
+Connecting to docs.google.com (docs.google.com)|216.58.192.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘C_ferri_R2.fastq.gz’
+
+     0K                                     20.3M=0s
+
+2019-10-05 14:46:13 (20.3 MB/s) - ‘C_ferri_R2.fastq.gz’ saved [3260]
+
+--2019-10-05 14:46:13--  https://docs.google.com/uc?export=download&confirm=CWo0&id=1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK
+Resolving docs.google.com (docs.google.com)... 216.58.192.238, 2607:f8b0:4009:80f::200e
+Connecting to docs.google.com (docs.google.com)|216.58.192.238|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://doc-04-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/kiude59tt4disetcpb9ot0bb3p5qijs4/1570298400000/00987064705                                                   613225626/*/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK?e=download [following]
+Warning: wildcards not supported in HTTP.
+--2019-10-05 14:46:13--  https://doc-04-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/kiude59tt4disetcpb9ot0bb3p5qijs4/1570298400                                                   000/00987064705613225626/*/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK?e=download
+Resolving doc-04-40-docs.googleusercontent.com (doc-04-40-docs.googleusercontent.com)... 172.217.9.65, 2607:f8b0:4009:816::2001
+Connecting to doc-04-40-docs.googleusercontent.com (doc-04-40-docs.googleusercontent.com)|172.217.9.65|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/octet-stream]
+Saving to: ‘C_ferri_R2.fastq.gz’
+
+     0K ........ ........ ........ ........ 11.9M
+ 32768K ........ ........ ........ ........ 11.8M
+ 65536K ........ ........ ........ ........ 12.1M
+ 98304K ........ ........ ........ ........ 11.2M
+131072K ........ ........ ........ ........ 12.0M
+163840K ........ ........ ........ ........ 12.1M
+196608K ........ ........ .......           12.3M=18s
+
+2019-10-05 14:46:32 (11.9 MB/s) - ‘C_ferri_R2.fastq.gz’ saved [225555584]
+
+(base) [btherani@colossus Weekly_assignment_4]$ ls
+C_ferri_R1.fastq.gz  C_ferri_R2.fastq.gz  C_hydro.fasta
+(base) [btherani@colossus Weekly_assignment_4]$ bowtie2-build C_hydro.fasta C_hydro
+Settings:
+  Output files: "C_hydro.*.bt2"
+  Line rate: 6 (line is 64 bytes)
+  Lines per side: 1 (side is 64 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Max bucket size: default
+  Max bucket size, sqrt multiplier: default
+  Max bucket size, len divisor: 4
+  Difference-cover sample period: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  C_hydro.fasta
+Building a SMALL index
+Reading reference sizes
+  Time reading reference sizes: 00:00:00
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:00
+bmax according to bmaxDivN setting: 600379
+Using parameters --bmax 450285 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 450285 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:00
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:00
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 2.40152e+06 (target: 450284)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 1
+  No samples; assembling all-inclusive block
+  Sorting block of length 2401519 for bucket 1
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 2401520 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 696564
+fchr[G]: 1201899
+fchr[T]: 1706396
+fchr[$]: 2401519
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 4995058 bytes to primary EBWT file: C_hydro.1.bt2
+Wrote 600384 bytes to secondary EBWT file: C_hydro.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 2401519
+    bwtLen: 2401520
+    sz: 600380
+    bwtSz: 600380
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 150095
+    offsSz: 600380
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 12508
+    numLines: 12508
+    ebwtTotLen: 800512
+    ebwtTotSz: 800512
+    color: 0
+    reverse: 0
+Total time for call to driver() for forward index: 00:00:00
+Reading reference sizes
+  Time reading reference sizes: 00:00:00
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:00
+  Time to reverse reference sequence: 00:00:00
+bmax according to bmaxDivN setting: 600379
+Using parameters --bmax 450285 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 450285 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:00
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:00
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 2.40152e+06 (target: 450284)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 1
+  No samples; assembling all-inclusive block
+  Sorting block of length 2401519 for bucket 1
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 2401520 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 696564
+fchr[G]: 1201899
+fchr[T]: 1706396
+fchr[$]: 2401519
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 4995058 bytes to primary EBWT file: C_hydro.rev.1.bt2
+Wrote 600384 bytes to secondary EBWT file: C_hydro.rev.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 2401519
+    bwtLen: 2401520
+    sz: 600380
+    bwtSz: 600380
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 150095
+    offsSz: 600380
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 12508
+    numLines: 12508
+    ebwtTotLen: 800512
+    ebwtTotSz: 800512
+    color: 0
+    reverse: 1
+Total time for backward call to driver() for mirror index: 00:00:01
+(base) [btherani@colossus Weekly_assignment_4]$ bowtie2 -x C_hydro -1 C_ferri_R1.fastq -2 C_ferri_R2.fastq -S map.sam              stat: Bad file descriptor
+Warning: Could not open read file "C_ferri_R1.fastq" for reading; skipping...
+Error: No input read files were valid
+(ERR): bowtie2-align exited with value 1
+(base) [btherani@colossus Weekly_assignment_4]$ bowtie2 -x C_hydro -1 C_ferri_R1.fastq.gz -2 C_ferri_R2.fastq.gz -S map.sam
+1000000 reads; of these:
+  1000000 (100.00%) were paired; of these:
+    272209 (27.22%) aligned concordantly 0 times
+    688505 (68.85%) aligned concordantly exactly 1 time
+    39286 (3.93%) aligned concordantly >1 times
+    ----
+    272209 pairs aligned concordantly 0 times; of these:
+      1645 (0.60%) aligned discordantly 1 time
+    ----
+    270564 pairs aligned 0 times concordantly or discordantly; of these:
+      541128 mates make up the pairs; of these:
+        509661 (94.18%) aligned 0 times
+        27395 (5.06%) aligned exactly 1 time
+        4072 (0.75%) aligned >1 times
+74.52% overall alignment rate
+(base) [btherani@colossus Weekly_assignment_4]$ fastqc C_ferri_R1.fastq.gz
+Failed to process C_ferri_R1.fastq.gz
+java.util.zip.ZipException: Not in GZIP format
+        at java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:165)
+        at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:79)
+        at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:91)
+        at uk.ac.babraham.FastQC.Utilities.MultiMemberGZIPInputStream.<init>(MultiMemberGZIPInputStream.java:37)
+        at uk.ac.babraham.FastQC.Sequence.FastQFile.<init>(FastQFile.java:80)
+        at uk.ac.babraham.FastQC.Sequence.SequenceFactory.getSequenceFile(SequenceFactory.java:106)
+        at uk.ac.babraham.FastQC.Sequence.SequenceFactory.getSequenceFile(SequenceFactory.java:62)
+        at uk.ac.babraham.FastQC.Analysis.OfflineRunner.processFile(OfflineRunner.java:152)
+        at uk.ac.babraham.FastQC.Analysis.OfflineRunner.<init>(OfflineRunner.java:121)
+        at uk.ac.babraham.FastQC.FastQCApplication.main(FastQCApplication.java:316)
