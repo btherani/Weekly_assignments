@@ -550,21 +550,22 @@ Approx 90% complete for C_ferri_R2.fastq
 Approx 95% complete for C_ferri_R2.fastq
 Approx 100% complete for C_ferri_R2.fastq
 Analysis complete for C_ferri_R2.fastq
-(base) [btherani@colossus Weekly_assignment_4]$ cutadapt -q 20,20 -a GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT -A GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT -m 50 --max-n 0 -o C_ferri_cutadapt_R1.fastq -p C_ferri_cutadapt_R2.fastq C_ferri_R1.fastq C_ferri_R2.fastq
+
+(base) [btherani@colossus Weekly_assignment_4]$ cutadapt -q 20,20 -a GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT -A GATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCG -m 50 --max-n 0 -o C.ferri_cutadapt_R1.fastq -p C.ferri_cutadapt_R2.fastq C_ferri_R1.fastq C_ferri_R2.fastq
 This is cutadapt 2.5 with Python 3.7.3
-Command line parameters: -q 20,20 -a GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT -A GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT -m 50 --max-n 0 -o C_ferri_cutadapt_R1.fastq -p C_ferri_cutadapt_R2.fastq C_ferri_R1.fastq C_ferri_R2.fastq
+Command line parameters: -q 20,20 -a GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT -A GATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCG -m 50 --max-n 0 -o C.ferri_cutadapt_R1.fastq -p C.ferri_cutadapt_R2.fastq C_ferri_R1.fastq C_ferri_R2.fastq
 Processing reads on 1 core in paired-end mode ...
 [        8=--] 00:00:19     1,000,000 reads  @     19.7 µs/read;   3.05 M reads/minute
-Finished in 20.02 s (20 us/read; 3.00 M reads/minute).
+Finished in 20.29 s (20 us/read; 2.96 M reads/minute).
 
 === Summary ===
 
 Total read pairs processed:          1,000,000
   Read 1 with adapter:                  62,221 (6.2%)
-  Read 2 with adapter:                  17,204 (1.7%)
-Pairs that were too short:              69,134 (6.9%)
-Pairs with too many N:                     930 (0.1%)
-Pairs written (passing filters):       929,936 (93.0%)
+  Read 2 with adapter:                  48,486 (4.8%)
+Pairs that were too short:              69,260 (6.9%)
+Pairs with too many N:                     928 (0.1%)
+Pairs written (passing filters):       929,812 (93.0%)
 
 Total basepairs processed:   152,000,000 bp
   Read 1:    76,000,000 bp
@@ -572,9 +573,9 @@ Total basepairs processed:   152,000,000 bp
 Quality-trimmed:               4,276,131 bp (2.8%)
   Read 1:     1,202,363 bp
   Read 2:     3,073,768 bp
-Total written (filtered):    140,434,802 bp (92.4%)
-  Read 1:    70,322,306 bp
-  Read 2:    70,112,496 bp
+Total written (filtered):    140,418,820 bp (92.4%)
+  Read 1:    70,314,894 bp
+  Read 2:    70,103,926 bp
 
 === First read: Adapter 1 ===
 
@@ -663,22 +664,22 @@ length  count   expect  max.err error counts
 
 === Second read: Adapter 2 ===
 
-Sequence: GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT; Type: regular 3'; Length: 50; Trimmed: 17204 times.
+Sequence: GATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCG; Type: regular 3'; Length: 50; Trimmed: 48486 times.
 
 No. of allowed errors:
 0-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-39 bp: 3; 40-49 bp: 4; 50 bp: 5
 
 Bases preceding removed adapters:
-  A: 24.9%
-  C: 19.8%
-  G: 28.8%
-  T: 25.4%
-  none/other: 1.1%
+  A: 46.7%
+  C: 12.7%
+  G: 18.4%
+  T: 16.2%
+  none/other: 6.1%
 
 Overview of removed sequences
 length  count   expect  max.err error counts
-3       11415   15625.0 0       11415
-4       1241    3906.2  0       1241
+3       11397   15625.0 0       11397
+4       1224    3906.2  0       1224
 5       372     976.6   0       372
 6       2841    244.1   0       2841
 7       35      61.0    0       35
@@ -688,8 +689,62 @@ length  count   expect  max.err error counts
 11      279     0.2     1       251 28
 12      26      0.1     1       19 7
 13      172     0.0     1       150 22
-14      18      0.0     1       0 18
-15      4       0.0     1       0 4
+14      21      0.0     1       17 4
+15      32      0.0     1       23 9
+16      96      0.0     1       83 13
+17      26      0.0     1       21 5
+18      70      0.0     1       50 20
+19      18      0.0     1       14 3 1
+20      2       0.0     2       2
+21      18      0.0     2       11 4 3
+22      164     0.0     2       95 49 20
+23      1691    0.0     2       1143 414 134
+24      20      0.0     2       6 9 5
+25      630     0.0     2       369 192 69
+26      378     0.0     2       179 131 68
+27      160     0.0     2       105 36 19
+28      20      0.0     2       10 8 2
+29      347     0.0     2       202 97 46 2
+30      26      0.0     3       9 5 8 4
+31      170     0.0     3       58 19 44 49
+32      8       0.0     3       3 2 1 2
+33      15      0.0     3       6 4 2 3
+34      68      0.0     3       35 14 11 8
+35      21      0.0     3       7 6 7 1
+36      16      0.0     3       5 7 2 2
+37      16      0.0     3       6 4 4 2
+38      45      0.0     3       19 18 6 2
+39      56      0.0     3       23 20 8 4 1
+40      241     0.0     4       132 71 31 5 2
+41      256     0.0     4       134 71 30 10 11
+42      21      0.0     4       7 6 1 3 4
+43      390     0.0     4       185 109 50 28 18
+44      1366    0.0     4       460 341 118 239 208
+45      101     0.0     4       67 11 11 3 6 3
+46      15      0.0     4       7 5 0 1 2
+47      74      0.0     4       40 21 8 4 0 1
+48      216     0.0     4       175 30 10 1
+49      64      0.0     4       34 22 5 2 0 1
+50      134     0.0     5       89 28 8 5 2 2
+51      8       0.0     5       4 2 0 0 1 1
+52      13      0.0     5       8 3 1 0 0 1
+53      40      0.0     5       27 9 2 1 0 1
+54      37      0.0     5       27 6 1 2 1
+55      45      0.0     5       32 12 1
+56      4458    0.0     5       4033 344 60 10 3 8
+57      54      0.0     5       29 8 2 0 1 14
+58      446     0.0     5       10 1 0 0 1 434
+59      159     0.0     5       33 19 8 4 4 91
+60      232     0.0     5       95 55 27 32 11 12
+61      375     0.0     5       232 66 52 16 6 3
+62      819     0.0     5       197 403 125 60 20 14
+63      14976   0.0     5       9569 3047 1438 569 252 101
+64      2343    0.0     5       1921 252 95 48 20 7
+65      317     0.0     5       251 38 17 6 3 2
+66      1       0.0     5       0 0 0 1
+67      1       0.0     5       1
+68      1       0.0     5       0 0 0 0 0 1
+76      2       0.0     5       0 0 0 1 1
 (base) [btherani@colossus Weekly_assignment_4]$ bowtie2-build C_hydro.fasta C_hydro
 Settings:
   Output files: "C_hydro.*.bt2"
@@ -753,7 +808,7 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 2401519 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:01
+  Sorting block time: 00:00:00
 Returning block of 2401520 for bucket 1
 Exited Ebwt loop
 fchr[A]: 0
@@ -792,7 +847,7 @@ Headers:
     ebwtTotSz: 800512
     color: 0
     reverse: 0
-Total time for call to driver() for forward index: 00:00:01
+Total time for call to driver() for forward index: 00:00:00
 Reading reference sizes
   Time reading reference sizes: 00:00:00
 Calculating joined length
@@ -876,19 +931,20 @@ Headers:
     color: 0
     reverse: 1
 Total time for backward call to driver() for mirror index: 00:00:00
-(base) [btherani@colossus Weekly_assignment_4]$ bowtie2 -x C_hydro -1 C_ferri_cutadapt_R1.fastq -2 C_ferri_cutadapt_R2.fastq -S map2.sam
-929936 reads; of these:
-  929936 (100.00%) were paired; of these:
-    213819 (22.99%) aligned concordantly 0 times
-    677669 (72.87%) aligned concordantly exactly 1 time
-    38448 (4.13%) aligned concordantly >1 times
+(base) [btherani@colossus Weekly_assignment_4]$ bowtie2 -x C_hydro -1 C.ferri_cutadapt_R1.fastq -2 C.ferri_cutadapt_R2.fastq -S map3.sam
+929812 reads; of these:
+  929812 (100.00%) were paired; of these:
+    213695 (22.98%) aligned concordantly 0 times
+    677669 (72.88%) aligned concordantly exactly 1 time
+    38448 (4.14%) aligned concordantly >1 times
     ----
-    213819 pairs aligned concordantly 0 times; of these:
-      1628 (0.76%) aligned discordantly 1 time
+    213695 pairs aligned concordantly 0 times; of these:
+      1673 (0.78%) aligned discordantly 1 time
     ----
-    212191 pairs aligned 0 times concordantly or discordantly; of these:
-      424382 mates make up the pairs; of these:
-        397172 (93.59%) aligned 0 times
-        23584 (5.56%) aligned exactly 1 time
-        3626 (0.85%) aligned >1 times
-78.65% overall alignment rate
+    212022 pairs aligned 0 times concordantly or discordantly; of these:
+      424044 mates make up the pairs; of these:
+        396875 (93.59%) aligned 0 times
+        23540 (5.55%) aligned exactly 1 time
+        3629 (0.86%) aligned >1 times
+78.66% overall alignment rate
+
