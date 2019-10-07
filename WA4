@@ -550,4 +550,345 @@ Approx 90% complete for C_ferri_R2.fastq
 Approx 95% complete for C_ferri_R2.fastq
 Approx 100% complete for C_ferri_R2.fastq
 Analysis complete for C_ferri_R2.fastq
+(base) [btherani@colossus Weekly_assignment_4]$ cutadapt -q 20,20 -a GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT -A GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT -m 50 --max-n 0 -o C_ferri_cutadapt_R1.fastq -p C_ferri_cutadapt_R2.fastq C_ferri_R1.fastq C_ferri_R2.fastq
+This is cutadapt 2.5 with Python 3.7.3
+Command line parameters: -q 20,20 -a GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT -A GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT -m 50 --max-n 0 -o C_ferri_cutadapt_R1.fastq -p C_ferri_cutadapt_R2.fastq C_ferri_R1.fastq C_ferri_R2.fastq
+Processing reads on 1 core in paired-end mode ...
+[        8=--] 00:00:19     1,000,000 reads  @     19.7 µs/read;   3.05 M reads/minute
+Finished in 20.02 s (20 us/read; 3.00 M reads/minute).
 
+=== Summary ===
+
+Total read pairs processed:          1,000,000
+  Read 1 with adapter:                  62,221 (6.2%)
+  Read 2 with adapter:                  17,204 (1.7%)
+Pairs that were too short:              69,134 (6.9%)
+Pairs with too many N:                     930 (0.1%)
+Pairs written (passing filters):       929,936 (93.0%)
+
+Total basepairs processed:   152,000,000 bp
+  Read 1:    76,000,000 bp
+  Read 2:    76,000,000 bp
+Quality-trimmed:               4,276,131 bp (2.8%)
+  Read 1:     1,202,363 bp
+  Read 2:     3,073,768 bp
+Total written (filtered):    140,434,802 bp (92.4%)
+  Read 1:    70,322,306 bp
+  Read 2:    70,112,496 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT; Type: regular 3'; Length: 50; Trimmed: 62221 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-39 bp: 3; 40-49 bp: 4; 50 bp: 5
+
+Bases preceding removed adapters:
+  A: 17.4%
+  C: 4.4%
+  G: 6.4%
+  T: 5.3%
+  none/other: 66.5%
+
+Overview of removed sequences
+length  count   expect  max.err error counts
+3       11615   15625.0 0       11615
+4       1178    3906.2  0       1178
+5       243     976.6   0       243
+6       99      244.1   0       99
+7       28      61.0    0       28
+8       19      15.3    0       19
+9       34      3.8     0       14 20
+10      33      1.0     1       11 22
+11      25      0.2     1       15 10
+12      7       0.1     1       6 1
+13      14      0.0     1       13 1
+14      23      0.0     1       23
+15      9       0.0     1       9
+16      13      0.0     1       12 1
+17      8       0.0     1       7 1
+18      11      0.0     1       9 2
+19      10      0.0     1       8 2
+20      13      0.0     2       8 5
+21      6       0.0     2       4 1 1
+22      17      0.0     2       15 2
+23      19      0.0     2       16 2 1
+24      20      0.0     2       18 2
+25      32      0.0     2       22 9 1
+26      16      0.0     2       14 2
+27      34      0.0     2       25 9
+28      63      0.0     2       52 8 2 1
+29      60      0.0     2       43 13 0 4
+30      116     0.0     3       95 15 3 3
+31      48      0.0     3       32 6 4 6
+32      115     0.0     3       102 10 1 2
+33      126     0.0     3       97 16 6 7
+34      309     0.0     3       245 41 14 9
+35      620     0.0     3       507 98 12 3
+36      580     0.0     3       540 35 4 1
+37      348     0.0     3       329 16 2 1
+38      185     0.0     3       166 9 3 2 5
+39      57      0.0     3       28 9 11 5 4
+40      190     0.0     4       85 8 5 89 3
+41      103     0.0     4       53 41 4 4 1
+42      225     0.0     4       137 73 9 4 2
+43      75      0.0     4       26 32 9 5 3
+44      199     0.0     4       112 74 6 4 3
+45      383     0.0     4       206 138 21 6 9 3
+46      215     0.0     4       116 71 16 9 3
+47      448     0.0     4       299 108 29 7 4 1
+48      865     0.0     4       502 268 37 7 5 46
+49      1095    0.0     4       646 381 33 23 8 4
+50      486     0.0     5       205 154 41 35 21 30
+51      133     0.0     5       34 70 19 9 1
+52      527     0.0     5       263 186 45 20 10 3
+53      1018    0.0     5       602 337 47 20 6 6
+54      592     0.0     5       252 245 59 13 11 12
+55      2258    0.0     5       1290 795 95 42 26 10
+56      3143    0.0     5       2015 982 77 40 20 9
+57      171     0.0     5       48 52 24 27 19 1
+58      731     0.0     5       380 249 57 25 8 12
+59      1515    0.0     5       864 492 65 46 24 24
+60      1237    0.0     5       664 337 47 100 59 30
+61      540     0.0     5       78 54 14 36 38 320
+62      375     0.0     5       107 69 20 63 92 24
+63      1549    0.0     5       490 288 49 521 189 12
+64      4309    0.0     5       2818 1250 169 64 7 1
+65      13438   0.0     5       9510 3537 360 29 1 1
+66      10171   0.0     5       8309 1804 55 2 1
+67      62      0.0     5       2 49 10 1
+75      1       0.0     5       0 0 0 1
+76      14      0.0     5       3 6 0 1 2 2
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATATCGTATGCCGT; Type: regular 3'; Length: 50; Trimmed: 17204 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-39 bp: 3; 40-49 bp: 4; 50 bp: 5
+
+Bases preceding removed adapters:
+  A: 24.9%
+  C: 19.8%
+  G: 28.8%
+  T: 25.4%
+  none/other: 1.1%
+
+Overview of removed sequences
+length  count   expect  max.err error counts
+3       11415   15625.0 0       11415
+4       1241    3906.2  0       1241
+5       372     976.6   0       372
+6       2841    244.1   0       2841
+7       35      61.0    0       35
+8       522     15.3    0       522
+9       143     3.8     0       112 31
+10      136     1.0     1       98 38
+11      279     0.2     1       251 28
+12      26      0.1     1       19 7
+13      172     0.0     1       150 22
+14      18      0.0     1       0 18
+15      4       0.0     1       0 4
+(base) [btherani@colossus Weekly_assignment_4]$ bowtie2-build C_hydro.fasta C_hydro
+Settings:
+  Output files: "C_hydro.*.bt2"
+  Line rate: 6 (line is 64 bytes)
+  Lines per side: 1 (side is 64 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Max bucket size: default
+  Max bucket size, sqrt multiplier: default
+  Max bucket size, len divisor: 4
+  Difference-cover sample period: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  C_hydro.fasta
+Building a SMALL index
+Reading reference sizes
+  Time reading reference sizes: 00:00:00
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:00
+bmax according to bmaxDivN setting: 600379
+Using parameters --bmax 450285 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 450285 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:00
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:00
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 2.40152e+06 (target: 450284)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 1
+  No samples; assembling all-inclusive block
+  Sorting block of length 2401519 for bucket 1
+  (Using difference cover)
+  Sorting block time: 00:00:01
+Returning block of 2401520 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 696564
+fchr[G]: 1201899
+fchr[T]: 1706396
+fchr[$]: 2401519
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 4995058 bytes to primary EBWT file: C_hydro.1.bt2
+Wrote 600384 bytes to secondary EBWT file: C_hydro.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 2401519
+    bwtLen: 2401520
+    sz: 600380
+    bwtSz: 600380
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 150095
+    offsSz: 600380
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 12508
+    numLines: 12508
+    ebwtTotLen: 800512
+    ebwtTotSz: 800512
+    color: 0
+    reverse: 0
+Total time for call to driver() for forward index: 00:00:01
+Reading reference sizes
+  Time reading reference sizes: 00:00:00
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:00
+  Time to reverse reference sequence: 00:00:00
+bmax according to bmaxDivN setting: 600379
+Using parameters --bmax 450285 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 450285 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:00
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:00
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 2.40152e+06 (target: 450284)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 1
+  No samples; assembling all-inclusive block
+  Sorting block of length 2401519 for bucket 1
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 2401520 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 696564
+fchr[G]: 1201899
+fchr[T]: 1706396
+fchr[$]: 2401519
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 4995058 bytes to primary EBWT file: C_hydro.rev.1.bt2
+Wrote 600384 bytes to secondary EBWT file: C_hydro.rev.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 2401519
+    bwtLen: 2401520
+    sz: 600380
+    bwtSz: 600380
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 150095
+    offsSz: 600380
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 12508
+    numLines: 12508
+    ebwtTotLen: 800512
+    ebwtTotSz: 800512
+    color: 0
+    reverse: 1
+Total time for backward call to driver() for mirror index: 00:00:00
+(base) [btherani@colossus Weekly_assignment_4]$ bowtie2 -x C_hydro -1 C_ferri_cutadapt_R1.fastq -2 C_ferri_cutadapt_R2.fastq -S map2.sam
+929936 reads; of these:
+  929936 (100.00%) were paired; of these:
+    213819 (22.99%) aligned concordantly 0 times
+    677669 (72.87%) aligned concordantly exactly 1 time
+    38448 (4.13%) aligned concordantly >1 times
+    ----
+    213819 pairs aligned concordantly 0 times; of these:
+      1628 (0.76%) aligned discordantly 1 time
+    ----
+    212191 pairs aligned 0 times concordantly or discordantly; of these:
+      424382 mates make up the pairs; of these:
+        397172 (93.59%) aligned 0 times
+        23584 (5.56%) aligned exactly 1 time
+        3626 (0.85%) aligned >1 times
+78.65% overall alignment rate
