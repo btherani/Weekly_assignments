@@ -253,9 +253,9 @@ Saving to: ‘C_ferri_R2.fastq.gz’
 Resolving docs.google.com (docs.google.com)... 216.58.192.238, 2607:f8b0:4009:80f::200e
 Connecting to docs.google.com (docs.google.com)|216.58.192.238|:443... connected.
 HTTP request sent, awaiting response... 302 Moved Temporarily
-Location: https://doc-04-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/kiude59tt4disetcpb9ot0bb3p5qijs4/1570298400000/00987064705                                                   613225626/*/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK?e=download [following]
+Location: https://doc-04-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/kiude59tt4disetcpb9ot0bb3p5qijs4/1570298400000/00987064705613225626/*/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK?e=download [following]
 Warning: wildcards not supported in HTTP.
---2019-10-05 14:46:13--  https://doc-04-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/kiude59tt4disetcpb9ot0bb3p5qijs4/1570298400                                                   000/00987064705613225626/*/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK?e=download
+--2019-10-05 14:46:13--  https://doc-04-40-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/kiude59tt4disetcpb9ot0bb3p5qijs4/1570298400000/00987064705613225626/*/1mZFvpSIctuBihkOlQX9vhrkxng3cRmvK?e=download
 Resolving doc-04-40-docs.googleusercontent.com (doc-04-40-docs.googleusercontent.com)... 172.217.9.65, 2607:f8b0:4009:816::2001
 Connecting to doc-04-40-docs.googleusercontent.com (doc-04-40-docs.googleusercontent.com)|172.217.9.65|:443... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -493,3 +493,61 @@ java.util.zip.ZipException: Not in GZIP format
         at uk.ac.babraham.FastQC.Analysis.OfflineRunner.processFile(OfflineRunner.java:152)
         at uk.ac.babraham.FastQC.Analysis.OfflineRunner.<init>(OfflineRunner.java:121)
         at uk.ac.babraham.FastQC.FastQCApplication.main(FastQCApplication.java:316)
+        
+        
+        
+(base) [btherani@colossus Weekly_assignment_4]$ cp C_ferri_R1.fastq.gz C_ferri_R1.fastq
+(base) [btherani@colossus Weekly_assignment_4]$ ls
+C_ferri_R1.fastq     C_ferri_R2.fastq.gz  test_C_ferri_R1.fastq.gz
+C_ferri_R1.fastq.gz  C_hydro.fasta
+(base) [btherani@colossus Weekly_assignment_4]$ cp C_ferri_R2.fastq.gz C_ferri_R2.fastq
+(base) [btherani@colossus Weekly_assignment_4]$ ls
+C_ferri_R1.fastq     C_ferri_R2.fastq     C_hydro.fasta
+C_ferri_R1.fastq.gz  C_ferri_R2.fastq.gz  test_C_ferri_R1.fastq.gz
+(base) [btherani@colossus Weekly_assignment_4]$ fastqc C_ferri_R1.fastq
+Started analysis of C_ferri_R1.fastq
+Approx 5% complete for C_ferri_R1.fastq
+Approx 10% complete for C_ferri_R1.fastq
+Approx 15% complete for C_ferri_R1.fastq
+Approx 20% complete for C_ferri_R1.fastq
+Approx 25% complete for C_ferri_R1.fastq
+Approx 30% complete for C_ferri_R1.fastq
+Approx 35% complete for C_ferri_R1.fastq
+Approx 40% complete for C_ferri_R1.fastq
+Approx 45% complete for C_ferri_R1.fastq
+Approx 50% complete for C_ferri_R1.fastq
+Approx 55% complete for C_ferri_R1.fastq
+Approx 60% complete for C_ferri_R1.fastq
+Approx 65% complete for C_ferri_R1.fastq
+Approx 70% complete for C_ferri_R1.fastq
+Approx 75% complete for C_ferri_R1.fastq
+Approx 80% complete for C_ferri_R1.fastq
+Approx 85% complete for C_ferri_R1.fastq
+Approx 90% complete for C_ferri_R1.fastq
+Approx 95% complete for C_ferri_R1.fastq
+Approx 100% complete for C_ferri_R1.fastq
+Analysis complete for C_ferri_R1.fastq
+(base) [btherani@colossus Weekly_assignment_4]$ fastqc C_ferri_R2.fastq
+Started analysis of C_ferri_R2.fastq
+Approx 5% complete for C_ferri_R2.fastq
+Approx 10% complete for C_ferri_R2.fastq
+Approx 15% complete for C_ferri_R2.fastq
+Approx 20% complete for C_ferri_R2.fastq
+Approx 25% complete for C_ferri_R2.fastq
+Approx 30% complete for C_ferri_R2.fastq
+Approx 35% complete for C_ferri_R2.fastq
+Approx 40% complete for C_ferri_R2.fastq
+Approx 45% complete for C_ferri_R2.fastq
+Approx 50% complete for C_ferri_R2.fastq
+Approx 55% complete for C_ferri_R2.fastq
+Approx 60% complete for C_ferri_R2.fastq
+Approx 65% complete for C_ferri_R2.fastq
+Approx 70% complete for C_ferri_R2.fastq
+Approx 75% complete for C_ferri_R2.fastq
+Approx 80% complete for C_ferri_R2.fastq
+Approx 85% complete for C_ferri_R2.fastq
+Approx 90% complete for C_ferri_R2.fastq
+Approx 95% complete for C_ferri_R2.fastq
+Approx 100% complete for C_ferri_R2.fastq
+Analysis complete for C_ferri_R2.fastq
+
