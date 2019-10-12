@@ -1,0 +1,758 @@
+Hostname: colossus.it
+System Type: Lab
+(base) [btherani@colossus ~]$ cd BL5300/
+(base) [btherani@colossus BL5300]$ cd Weekly_assignment_5
+(base) [btherani@colossus Weekly_assignment_5]$ ls
+N2_S15_L001_R1_001.fastq.gz  README_Strain_information.docx
+N2_S15_L001_R2_001.fastq.gz
+(base) [btherani@colossus Weekly_assignment_5]$ cutadapt -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -m 50 --max-n 0 -o N2_R1.cutadapt.fastq -p N2_R2.cutadapt.fastq N2_S15_L001_R1_001.fastq.gz N2_S15_L001_R2_001.fastq.gz
+This is cutadapt 2.5 with Python 3.7.3
+Command line parameters: -q 20,20 -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -A CTGTCTCTTATACACATCTGACGCTGCCGACGA -m 50 --max-n 0 -o N2_R1.cutadapt.fastq -p N2_R2.cutadapt.fastq N2_S15_L001_R1_001.fastq.gz N2_S15_L001_R2_001.fastq.gz
+Processing reads on 1 core in paired-end mode ...
+[  8=--------] 00:03:51     5,334,195 reads  @     43.4 µs/read;   1.38 M reads/minute
+Finished in 231.33 s (43 us/read; 1.38 M reads/minute).
+
+=== Summary ===
+
+Total read pairs processed:          5,334,195
+  Read 1 with adapter:                 180,739 (3.4%)
+  Read 2 with adapter:                 267,331 (5.0%)
+Pairs that were too short:              64,753 (1.2%)
+Pairs with too many N:                     502 (0.0%)
+Pairs written (passing filters):     5,268,940 (98.8%)
+
+Total basepairs processed: 2,347,742,152 bp
+  Read 1: 1,149,780,165 bp
+  Read 2: 1,197,961,987 bp
+Quality-trimmed:             197,755,137 bp (8.4%)
+  Read 1:    24,754,190 bp
+  Read 2:   173,000,947 bp
+Total written (filtered):  2,134,636,108 bp (90.9%)
+  Read 1: 1,117,597,155 bp
+  Read 2: 1,017,038,953 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CTGTCTCTTATACACATCTCCGAGCCCACGAGAC; Type: regular 3'; Length: 34; Trimmed: 180739 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-34 bp: 3
+
+Bases preceding removed adapters:
+  A: 18.9%
+  C: 33.3%
+  G: 29.8%
+  T: 18.0%
+  none/other: 0.0%
+
+Overview of removed sequences
+length  count   expect  max.err error counts
+3       72452   83346.8 0       72452
+4       12117   20836.7 0       12117
+5       6338    5209.2  0       6338
+6       2285    1302.3  0       2285
+7       1064    325.6   0       1064
+8       1035    81.4    0       1035
+9       1731    20.3    0       1645 86
+10      1182    5.1     1       576 606
+11      3131    1.3     1       1724 1407
+12      2538    0.3     1       1033 1505
+13      2476    0.1     1       940 1536
+14      1602    0.0     1       436 1166
+15      1374    0.0     1       215 1159
+16      972     0.0     1       123 849
+17      1103    0.0     1       81 1022
+18      475     0.0     1       0 429 46
+19      46      0.0     1       0 25 21
+20      2072    0.0     2       0 37 2035
+21      2487    0.0     2       0 15 2472
+22      1622    0.0     2       0 28 1594
+23      1512    0.0     2       0 10 1502
+24      982     0.0     2       0 17 965
+25      998     0.0     2       0 10 988
+26      1162    0.0     2       0 11 1151
+27      1010    0.0     2       0 8 1002
+28      884     0.0     2       0 8 875 1
+29      1186    0.0     2       0 14 1163 9
+30      1975    0.0     3       0 9 1122 844
+31      1296    0.0     3       0 6 674 616
+32      688     0.0     3       0 12 342 334
+33      2077    0.0     3       0 6 1010 1061
+34      1170    0.0     3       0 14 571 585
+35      1191    0.0     3       0 17 576 598
+36      2085    0.0     3       0 17 1053 1015
+37      2158    0.0     3       0 20 1038 1100
+38      1862    0.0     3       0 18 916 928
+39      2036    0.0     3       0 14 1011 1011
+40      1503    0.0     3       0 19 747 737
+41      1909    0.0     3       0 28 1061 820
+42      1941    0.0     3       0 42 1000 899
+43      3101    0.0     3       0 19 1627 1455
+44      675     0.0     3       0 27 342 306
+45      395     0.0     3       0 11 201 183
+46      331     0.0     3       0 3 167 161
+47      379     0.0     3       0 7 181 191
+48      626     0.0     3       0 7 316 303
+49      629     0.0     3       0 13 319 297
+50      659     0.0     3       0 15 368 276
+51      665     0.0     3       0 11 340 314
+52      805     0.0     3       0 18 436 351
+53      984     0.0     3       0 25 513 446
+54      849     0.0     3       0 35 457 357
+55      1369    0.0     3       0 37 753 579
+56      822     0.0     3       0 27 459 336
+57      740     0.0     3       0 28 421 291
+58      693     0.0     3       0 24 394 275
+59      818     0.0     3       0 25 417 376
+60      503     0.0     3       0 26 293 184
+61      534     0.0     3       0 27 287 220
+62      692     0.0     3       0 26 378 288
+63      669     0.0     3       0 34 354 281
+64      724     0.0     3       0 42 425 257
+65      697     0.0     3       0 53 378 266
+66      710     0.0     3       0 30 415 265
+67      537     0.0     3       0 68 301 168
+68      576     0.0     3       0 43 306 227
+69      652     0.0     3       0 53 335 264
+70      717     0.0     3       0 59 376 282
+71      719     0.0     3       0 73 374 272
+72      800     0.0     3       0 91 419 290
+73      922     0.0     3       0 139 451 332
+74      987     0.0     3       0 142 513 332
+75      1306    0.0     3       0 440 563 303
+76      1520    0.0     3       0 274 814 432
+77      1017    0.0     3       0 449 352 216
+78      511     0.0     3       0 194 204 113
+79      289     0.0     3       0 90 124 75
+80      171     0.0     3       0 52 70 49
+81      136     0.0     3       0 31 62 43
+82      101     0.0     3       0 14 54 33
+83      103     0.0     3       0 17 55 31
+84      110     0.0     3       0 18 48 44
+85      104     0.0     3       0 14 49 41
+86      82      0.0     3       0 7 40 35
+87      71      0.0     3       0 5 29 37
+88      64      0.0     3       0 4 41 19
+89      55      0.0     3       0 5 24 26
+90      59      0.0     3       0 4 35 20
+91      62      0.0     3       0 6 28 28
+92      50      0.0     3       0 2 25 23
+93      62      0.0     3       0 8 31 23
+94      50      0.0     3       0 6 24 20
+95      46      0.0     3       0 1 25 20
+96      42      0.0     3       0 3 25 14
+97      34      0.0     3       0 4 17 13
+98      38      0.0     3       0 2 15 21
+99      44      0.0     3       0 2 27 15
+100     38      0.0     3       0 2 27 9
+101     24      0.0     3       0 0 17 7
+102     45      0.0     3       0 2 23 20
+103     28      0.0     3       0 1 16 11
+104     35      0.0     3       0 1 21 13
+105     24      0.0     3       0 0 14 10
+106     27      0.0     3       0 0 14 13
+107     36      0.0     3       0 2 14 20
+108     20      0.0     3       0 2 8 10
+109     29      0.0     3       0 1 15 13
+110     30      0.0     3       0 1 14 15
+111     27      0.0     3       0 1 14 12
+112     26      0.0     3       0 1 16 9
+113     24      0.0     3       0 1 11 12
+114     25      0.0     3       0 2 8 15
+115     23      0.0     3       0 0 12 11
+116     28      0.0     3       0 1 15 12
+117     23      0.0     3       0 0 13 10
+118     26      0.0     3       0 2 10 14
+119     21      0.0     3       0 1 12 8
+120     24      0.0     3       0 3 10 11
+121     28      0.0     3       0 2 14 12
+122     29      0.0     3       0 0 16 13
+123     20      0.0     3       0 2 8 10
+124     22      0.0     3       0 2 9 11
+125     19      0.0     3       0 2 9 8
+126     20      0.0     3       0 3 11 6
+127     25      0.0     3       0 2 12 11
+128     16      0.0     3       0 1 12 3
+129     13      0.0     3       0 0 6 7
+130     23      0.0     3       0 2 16 5
+131     17      0.0     3       0 1 8 8
+132     14      0.0     3       0 1 6 7
+133     23      0.0     3       0 1 15 7
+134     22      0.0     3       0 0 12 10
+135     21      0.0     3       0 4 8 9
+136     16      0.0     3       0 1 11 4
+137     17      0.0     3       0 0 7 10
+138     19      0.0     3       0 0 12 7
+139     17      0.0     3       0 2 8 7
+140     12      0.0     3       0 2 7 3
+141     22      0.0     3       0 5 11 6
+142     22      0.0     3       0 0 12 10
+143     15      0.0     3       0 3 4 8
+144     18      0.0     3       0 1 7 10
+145     24      0.0     3       0 0 11 13
+146     17      0.0     3       0 2 9 6
+147     22      0.0     3       0 1 10 11
+148     19      0.0     3       0 1 8 10
+149     18      0.0     3       0 0 9 9
+150     16      0.0     3       0 2 6 8
+151     18      0.0     3       0 0 8 10
+152     18      0.0     3       0 1 7 10
+153     15      0.0     3       0 1 8 6
+154     20      0.0     3       0 0 10 10
+155     13      0.0     3       0 2 6 5
+156     11      0.0     3       0 0 7 4
+157     14      0.0     3       0 2 6 6
+158     19      0.0     3       0 2 14 3
+159     15      0.0     3       0 0 13 2
+160     9       0.0     3       0 0 5 4
+161     17      0.0     3       0 3 10 4
+162     10      0.0     3       0 1 4 5
+163     11      0.0     3       0 0 6 5
+164     12      0.0     3       0 0 7 5
+165     13      0.0     3       0 1 9 3
+166     12      0.0     3       0 2 9 1
+167     9       0.0     3       0 1 7 1
+168     11      0.0     3       0 0 6 5
+169     11      0.0     3       0 0 9 2
+170     13      0.0     3       0 0 7 6
+171     8       0.0     3       0 3 4 1
+172     7       0.0     3       0 0 4 3
+173     13      0.0     3       0 0 7 6
+174     9       0.0     3       0 2 5 2
+175     12      0.0     3       0 1 6 5
+176     10      0.0     3       0 1 5 4
+177     5       0.0     3       0 0 4 1
+178     7       0.0     3       0 2 3 2
+179     9       0.0     3       0 2 4 3
+180     7       0.0     3       0 0 4 3
+181     16      0.0     3       0 2 7 7
+182     8       0.0     3       0 0 6 2
+183     6       0.0     3       0 2 2 2
+184     14      0.0     3       0 2 8 4
+185     8       0.0     3       0 0 3 5
+186     10      0.0     3       0 2 4 4
+187     8       0.0     3       0 0 4 4
+188     6       0.0     3       0 0 4 2
+189     5       0.0     3       0 2 1 2
+190     1       0.0     3       0 0 1
+191     4       0.0     3       0 0 2 2
+192     9       0.0     3       0 0 3 6
+193     4       0.0     3       0 0 1 3
+194     3       0.0     3       0 0 2 1
+195     5       0.0     3       0 0 3 2
+196     9       0.0     3       0 0 6 3
+197     5       0.0     3       0 1 3 1
+198     9       0.0     3       0 1 4 4
+199     8       0.0     3       0 0 6 2
+200     6       0.0     3       0 1 3 2
+201     9       0.0     3       0 0 3 6
+202     11      0.0     3       0 1 6 4
+203     6       0.0     3       0 1 2 3
+204     1       0.0     3       0 0 0 1
+205     7       0.0     3       0 0 2 5
+206     7       0.0     3       0 2 3 2
+207     8       0.0     3       0 1 4 3
+208     5       0.0     3       0 1 2 2
+209     8       0.0     3       0 2 2 4
+210     3       0.0     3       0 0 1 2
+211     6       0.0     3       0 0 1 5
+212     2       0.0     3       0 0 1 1
+213     10      0.0     3       0 4 3 3
+214     4       0.0     3       0 0 2 2
+215     5       0.0     3       0 1 3 1
+216     4       0.0     3       0 2 2
+218     6       0.0     3       0 0 3 3
+219     3       0.0     3       0 0 3
+220     7       0.0     3       0 1 2 4
+221     1       0.0     3       0 0 1
+222     3       0.0     3       0 0 2 1
+223     3       0.0     3       0 0 3
+224     5       0.0     3       0 3 1 1
+225     4       0.0     3       0 0 3 1
+226     7       0.0     3       0 1 5 1
+227     2       0.0     3       0 0 0 2
+228     1       0.0     3       0 0 1
+229     3       0.0     3       0 0 2 1
+230     6       0.0     3       0 1 2 3
+231     8       0.0     3       0 2 3 3
+232     1       0.0     3       0 0 1
+233     3       0.0     3       0 0 0 3
+234     3       0.0     3       0 1 1 1
+236     2       0.0     3       0 0 1 1
+237     2       0.0     3       0 0 2
+238     2       0.0     3       0 0 2
+239     3       0.0     3       0 1 2
+240     2       0.0     3       0 0 2
+241     4       0.0     3       0 1 3
+242     2       0.0     3       0 1 1
+243     1       0.0     3       0 0 1
+244     1       0.0     3       0 0 1
+245     3       0.0     3       0 0 1 2
+246     2       0.0     3       0 0 2
+247     2       0.0     3       0 0 1 1
+248     5       0.0     3       0 0 4 1
+249     2       0.0     3       0 1 0 1
+250     3       0.0     3       0 1 0 2
+251     2       0.0     3       0 1 0 1
+252     3       0.0     3       0 0 1 2
+253     3       0.0     3       0 1 1 1
+254     3       0.0     3       0 2 0 1
+255     3       0.0     3       0 0 1 2
+256     2       0.0     3       0 1 0 1
+257     1       0.0     3       0 1
+258     2       0.0     3       0 1 0 1
+259     3       0.0     3       0 1 1 1
+260     2       0.0     3       0 0 0 2
+261     2       0.0     3       0 1 1
+263     4       0.0     3       0 1 2 1
+265     3       0.0     3       0 0 1 2
+266     1       0.0     3       0 0 1
+268     1       0.0     3       0 0 0 1
+271     1       0.0     3       0 0 1
+272     1       0.0     3       0 0 0 1
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: CTGTCTCTTATACACATCTGACGCTGCCGACGA; Type: regular 3'; Length: 33; Trimmed: 267331 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-33 bp: 3
+
+Bases preceding removed adapters:
+  A: 16.8%
+  C: 36.4%
+  G: 28.0%
+  T: 18.8%
+  none/other: 0.0%
+
+Overview of removed sequences
+length  count   expect  max.err error counts
+3       82482   83346.8 0       82482
+4       19181   20836.7 0       19181
+5       13344   5209.2  0       13344
+6       4014    1302.3  0       4014
+7       2815    325.6   0       2815
+8       3527    81.4    0       3527
+9       6978    20.3    0       6882 96
+10      5177    5.1     1       3016 2161
+11      12524   1.3     1       7972 4552
+12      7844    0.3     1       3894 3950
+13      9188    0.1     1       4425 4763
+14      4695    0.0     1       1525 3170
+15      4092    0.0     1       1004 3088
+16      2944    0.0     1       523 2421
+17      1906    0.0     1       166 1740
+18      853     0.0     1       0 853
+19      49      0.0     1       0 19 30
+20      2660    0.0     2       0 27 2633
+21      1880    0.0     2       0 26 1854
+22      2682    0.0     2       0 19 2663
+23      2346    0.0     2       0 20 2326
+24      2430    0.0     2       0 21 2409
+25      1969    0.0     2       0 11 1958
+26      1312    0.0     2       0 15 1297
+27      1891    0.0     2       0 20 1871
+28      2194    0.0     2       0 35 2158 1
+29      3043    0.0     2       0 13 3022 8
+30      2300    0.0     3       0 34 1303 963
+31      2997    0.0     3       0 20 1744 1233
+32      4228    0.0     3       0 30 2583 1615
+33      4267    0.0     3       0 34 2519 1714
+34      3480    0.0     3       0 38 1929 1513
+35      3522    0.0     3       0 39 2032 1451
+36      2155    0.0     3       0 36 1132 987
+37      2487    0.0     3       0 39 1417 1031
+38      2948    0.0     3       0 39 1688 1221
+39      2913    0.0     3       0 47 1648 1218
+40      1274    0.0     3       0 35 718 521
+41      1075    0.0     3       0 35 561 479
+42      1240    0.0     3       0 25 707 508
+43      967     0.0     3       0 44 589 334
+44      944     0.0     3       0 50 544 350
+45      811     0.0     3       0 67 491 253
+46      840     0.0     3       0 59 484 297
+47      641     0.0     3       0 57 358 226
+48      604     0.0     3       0 45 305 254
+49      420     0.0     3       0 42 192 186
+50      309     0.0     3       0 32 144 133
+51      244     0.0     3       0 36 111 97
+52      218     0.0     3       0 31 99 88
+53      211     0.0     3       0 26 99 86
+54      211     0.0     3       0 32 93 86
+55      140     0.0     3       0 31 69 40
+56      127     0.0     3       0 23 42 62
+57      176     0.0     3       0 25 81 70
+58      153     0.0     3       0 21 78 54
+59      133     0.0     3       0 28 38 67
+60      137     0.0     3       0 18 52 67
+61      130     0.0     3       0 20 39 71
+62      107     0.0     3       0 22 35 50
+63      140     0.0     3       0 17 51 72
+64      119     0.0     3       0 14 41 64
+65      135     0.0     3       0 12 39 84
+66      154     0.0     3       0 4 52 98
+67      88      0.0     3       0 2 25 61
+68      183     0.0     3       0 5 69 109
+69      152     0.0     3       0 2 50 100
+70      123     0.0     3       0 4 32 87
+71      193     0.0     3       0 7 62 124
+72      296     0.0     3       0 3 108 185
+73      506     0.0     3       0 11 184 311
+74      537     0.0     3       0 10 193 334
+75      669     0.0     3       0 8 244 417
+76      664     0.0     3       0 12 223 429
+77      689     0.0     3       0 29 241 419
+78      706     0.0     3       0 28 256 422
+79      765     0.0     3       0 47 260 458
+80      758     0.0     3       0 56 271 431
+81      713     0.0     3       0 69 232 412
+82      548     0.0     3       0 31 199 318
+83      434     0.0     3       0 18 150 266
+84      414     0.0     3       0 11 138 265
+85      358     0.0     3       0 13 153 192
+86      338     0.0     3       0 4 136 198
+87      287     0.0     3       0 4 117 166
+88      295     0.0     3       0 2 128 165
+89      308     0.0     3       0 3 122 183
+90      274     0.0     3       0 1 120 153
+91      273     0.0     3       0 3 100 170
+92      288     0.0     3       0 1 107 180
+93      265     0.0     3       0 1 118 146
+94      259     0.0     3       0 5 104 150
+95      256     0.0     3       0 1 101 154
+96      242     0.0     3       0 2 98 142
+97      209     0.0     3       0 0 78 131
+98      228     0.0     3       0 1 99 128
+99      225     0.0     3       0 0 81 144
+100     183     0.0     3       0 6 84 93
+101     216     0.0     3       0 2 83 131
+102     193     0.0     3       0 0 73 120
+103     177     0.0     3       0 1 68 108
+104     173     0.0     3       0 2 75 96
+105     175     0.0     3       0 2 81 92
+106     154     0.0     3       0 3 73 78
+107     197     0.0     3       0 3 88 106
+108     145     0.0     3       0 3 59 83
+109     174     0.0     3       0 4 70 100
+110     150     0.0     3       0 1 75 74
+111     146     0.0     3       0 2 59 85
+112     167     0.0     3       0 1 76 90
+113     168     0.0     3       0 3 79 86
+114     171     0.0     3       0 2 67 102
+115     168     0.0     3       0 0 73 95
+116     175     0.0     3       0 2 70 103
+117     164     0.0     3       0 0 70 94
+118     167     0.0     3       0 1 80 86
+119     161     0.0     3       0 3 84 74
+120     145     0.0     3       0 0 64 81
+121     176     0.0     3       0 2 88 86
+122     135     0.0     3       0 4 67 64
+123     133     0.0     3       0 3 61 69
+124     166     0.0     3       0 1 74 91
+125     153     0.0     3       0 5 75 73
+126     133     0.0     3       0 6 67 60
+127     154     0.0     3       0 5 87 62
+128     144     0.0     3       0 0 74 70
+129     109     0.0     3       0 2 58 49
+130     97      0.0     3       0 2 54 41
+131     115     0.0     3       0 3 63 49
+132     85      0.0     3       0 4 32 49
+133     118     0.0     3       0 5 53 60
+134     93      0.0     3       0 3 43 47
+135     91      0.0     3       0 3 34 54
+136     93      0.0     3       0 0 50 43
+137     95      0.0     3       0 0 53 42
+138     81      0.0     3       0 0 43 38
+139     65      0.0     3       0 3 35 27
+140     65      0.0     3       0 1 30 34
+141     67      0.0     3       0 1 27 39
+142     75      0.0     3       0 1 44 30
+143     75      0.0     3       0 2 31 42
+144     79      0.0     3       0 6 46 27
+145     61      0.0     3       0 0 29 32
+146     57      0.0     3       0 1 22 34
+147     58      0.0     3       0 4 31 23
+148     58      0.0     3       0 2 29 27
+149     64      0.0     3       0 1 33 30
+150     53      0.0     3       0 3 23 27
+151     55      0.0     3       0 3 23 29
+152     45      0.0     3       0 3 25 17
+153     44      0.0     3       0 4 22 18
+154     35      0.0     3       0 1 14 20
+155     45      0.0     3       0 3 18 24
+156     37      0.0     3       0 1 15 21
+157     30      0.0     3       0 0 16 14
+158     39      0.0     3       0 5 16 18
+159     39      0.0     3       0 3 21 15
+160     34      0.0     3       0 4 16 14
+161     36      0.0     3       0 1 16 19
+162     46      0.0     3       0 1 25 20
+163     31      0.0     3       0 0 13 18
+164     26      0.0     3       0 2 10 14
+165     22      0.0     3       0 0 11 11
+166     26      0.0     3       0 3 8 15
+167     29      0.0     3       0 1 9 19
+168     29      0.0     3       0 1 19 9
+169     17      0.0     3       0 2 12 3
+170     28      0.0     3       0 0 14 14
+171     22      0.0     3       0 1 11 10
+172     22      0.0     3       0 3 12 7
+173     18      0.0     3       0 1 12 5
+174     14      0.0     3       0 2 10 2
+175     18      0.0     3       0 2 6 10
+176     21      0.0     3       0 2 10 9
+177     13      0.0     3       0 1 6 6
+178     17      0.0     3       0 3 11 3
+179     15      0.0     3       0 0 8 7
+180     21      0.0     3       0 3 8 10
+181     9       0.0     3       0 1 6 2
+182     17      0.0     3       0 2 5 10
+183     14      0.0     3       0 0 6 8
+184     13      0.0     3       0 3 3 7
+185     12      0.0     3       0 0 9 3
+186     14      0.0     3       0 1 6 7
+187     23      0.0     3       0 0 15 8
+188     16      0.0     3       0 4 8 4
+189     10      0.0     3       0 2 4 4
+190     13      0.0     3       0 3 8 2
+191     10      0.0     3       0 1 3 6
+192     8       0.0     3       0 0 3 5
+193     13      0.0     3       0 4 4 5
+194     13      0.0     3       0 2 7 4
+195     9       0.0     3       0 3 2 4
+196     3       0.0     3       0 0 1 2
+197     5       0.0     3       0 0 3 2
+198     9       0.0     3       0 1 3 5
+199     8       0.0     3       0 1 7
+200     3       0.0     3       0 0 2 1
+201     15      0.0     3       0 3 9 3
+202     9       0.0     3       0 2 4 3
+203     7       0.0     3       0 0 4 3
+204     11      0.0     3       0 0 4 7
+205     7       0.0     3       0 1 3 3
+206     7       0.0     3       0 3 2 2
+207     5       0.0     3       0 0 4 1
+208     2       0.0     3       0 1 0 1
+209     2       0.0     3       0 0 2
+210     7       0.0     3       0 3 4
+211     6       0.0     3       0 0 2 4
+212     8       0.0     3       0 0 6 2
+213     8       0.0     3       0 2 4 2
+214     2       0.0     3       0 1 0 1
+215     6       0.0     3       0 3 2 1
+216     5       0.0     3       0 1 1 3
+217     4       0.0     3       0 0 1 3
+218     3       0.0     3       0 1 2
+219     7       0.0     3       0 3 1 3
+220     4       0.0     3       0 0 2 2
+221     3       0.0     3       0 0 1 2
+222     2       0.0     3       0 0 0 2
+223     5       0.0     3       0 1 4
+224     1       0.0     3       0 1
+225     2       0.0     3       0 2
+226     1       0.0     3       0 1
+228     3       0.0     3       0 0 2 1
+230     3       0.0     3       0 0 2 1
+231     2       0.0     3       0 0 2
+232     3       0.0     3       0 2 1
+233     1       0.0     3       0 1
+234     5       0.0     3       0 2 2 1
+236     1       0.0     3       0 0 0 1
+237     3       0.0     3       0 1 0 2
+238     3       0.0     3       0 1 1 1
+239     1       0.0     3       0 0 0 1
+240     1       0.0     3       0 0 1
+241     1       0.0     3       0 0 1
+243     2       0.0     3       0 0 1 1
+244     2       0.0     3       0 2
+245     4       0.0     3       0 1 2 1
+246     2       0.0     3       0 0 0 2
+247     1       0.0     3       0 0 1
+249     2       0.0     3       0 0 1 1
+250     2       0.0     3       0 0 1 1
+253     1       0.0     3       0 0 0 1
+254     3       0.0     3       0 1 0 2
+255     1       0.0     3       0 0 1
+256     4       0.0     3       0 2 1 1
+257     1       0.0     3       0 1
+258     1       0.0     3       0 0 0 1
+260     1       0.0     3       0 0 1
+261     1       0.0     3       0 0 0 1
+263     2       0.0     3       0 1 1
+271     1       0.0     3       0 0 0 1
+272     1       0.0     3       0 0 0 1
+(base) [btherani@colossus Weekly_assignment_5]$ ls
+N2_R1.cutadapt.fastq  N2_R2.cutadapt.fastq  N2_S15_L001_R1_001.fastq.gz  N2_S15_L001_R2_001.fastq.gz  README_Strain_information.docx
+(base) [btherani@colossus Weekly_assignment_5]$ fastqc N2_S15_L001_R1_001.fastq.gz
+Started analysis of N2_S15_L001_R1_001.fastq.gz
+Approx 5% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 10% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 15% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 20% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 25% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 30% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 35% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 40% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 45% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 50% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 55% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 60% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 65% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 70% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 75% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 80% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 85% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 90% complete for N2_S15_L001_R1_001.fastq.gz
+Approx 95% complete for N2_S15_L001_R1_001.fastq.gz
+Analysis complete for N2_S15_L001_R1_001.fastq.gz
+(base) [btherani@colossus Weekly_assignment_5]$ fastqc N2_S15_L001_R2_001.fastq.gz
+Started analysis of N2_S15_L001_R2_001.fastq.gz
+Approx 5% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 10% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 15% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 20% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 25% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 30% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 35% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 40% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 45% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 50% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 55% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 60% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 65% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 70% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 75% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 80% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 85% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 90% complete for N2_S15_L001_R2_001.fastq.gz
+Approx 95% complete for N2_S15_L001_R2_001.fastq.gz
+Analysis complete for N2_S15_L001_R2_001.fastq.gz
+(base) [btherani@colossus Weekly_assignment_5]$ fastqc N2_R1.cutadapt.fastq
+Started analysis of N2_R1.cutadapt.fastq
+Approx 5% complete for N2_R1.cutadapt.fastq
+Approx 10% complete for N2_R1.cutadapt.fastq
+Approx 15% complete for N2_R1.cutadapt.fastq
+Approx 20% complete for N2_R1.cutadapt.fastq
+Approx 25% complete for N2_R1.cutadapt.fastq
+Approx 30% complete for N2_R1.cutadapt.fastq
+Approx 35% complete for N2_R1.cutadapt.fastq
+Approx 40% complete for N2_R1.cutadapt.fastq
+Approx 45% complete for N2_R1.cutadapt.fastq
+Approx 50% complete for N2_R1.cutadapt.fastq
+Approx 55% complete for N2_R1.cutadapt.fastq
+Approx 60% complete for N2_R1.cutadapt.fastq
+Approx 65% complete for N2_R1.cutadapt.fastq
+Approx 70% complete for N2_R1.cutadapt.fastq
+Approx 75% complete for N2_R1.cutadapt.fastq
+Approx 80% complete for N2_R1.cutadapt.fastq
+Approx 85% complete for N2_R1.cutadapt.fastq
+Approx 90% complete for N2_R1.cutadapt.fastq
+Approx 95% complete for N2_R1.cutadapt.fastq
+Analysis complete for N2_R1.cutadapt.fastq
+(base) [btherani@colossus Weekly_assignment_5]$ fastqc N2_R2.cutadapt.fastq
+Started analysis of N2_R2.cutadapt.fastq
+Approx 5% complete for N2_R2.cutadapt.fastq
+Approx 10% complete for N2_R2.cutadapt.fastq
+Approx 15% complete for N2_R2.cutadapt.fastq
+Approx 20% complete for N2_R2.cutadapt.fastq
+Approx 25% complete for N2_R2.cutadapt.fastq
+Approx 30% complete for N2_R2.cutadapt.fastq
+Approx 35% complete for N2_R2.cutadapt.fastq
+Approx 40% complete for N2_R2.cutadapt.fastq
+Approx 45% complete for N2_R2.cutadapt.fastq
+Approx 50% complete for N2_R2.cutadapt.fastq
+Approx 55% complete for N2_R2.cutadapt.fastq
+Approx 60% complete for N2_R2.cutadapt.fastq
+Approx 65% complete for N2_R2.cutadapt.fastq
+Approx 70% complete for N2_R2.cutadapt.fastq
+Approx 75% complete for N2_R2.cutadapt.fastq
+Approx 80% complete for N2_R2.cutadapt.fastq
+Approx 85% complete for N2_R2.cutadapt.fastq
+Approx 90% complete for N2_R2.cutadapt.fastq
+Approx 95% complete for N2_R2.cutadapt.fastq
+Analysis complete for N2_R2.cutadapt.fastq
+(base) [btherani@colossus Weekly_assignment_5]$ conda activate de_novo
+(de_novo) [btherani@colossus Weekly_assignment_5]$ spades.py -k 21,51,71,91,111,127 --careful --pe1-1 N2_R1.cutadapt.fastq --pe1-2 N2_R2.cutadapt.fastq -o N2_spades_output
+Command line: /home/campus29/btherani/miniconda3/envs/de_novo/bin/spades.py     -k      21,51,71,91,111,127     --careful       --pe1-1 /home/campus29/btherani/BL5300/Weekly_assignment_5/N2_R1.cutadapt.fastq      --pe1-2 /home/campus29/btherani/BL5300/Weekly_assignment_5/N2_R2.cutadapt.fastq -o      /home/campus29/btherani/BL5300/Weekly_assignment_5/N2_spades_output
+
+System information:
+  SPAdes version: 3.11.1
+  Python version: 3.6.7
+  OS: Linux-3.10.0-1062.el7.x86_64-x86_64-with-redhat-7.7-Maipo
+
+Output dir: /home/campus29/btherani/BL5300/Weekly_assignment_5/N2_spades_output
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Multi-cell mode (you should set '--sc' flag if input data was obtained with MDA (single-cell) technology or --meta flag if processing metagenomic dataset)
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/home/campus29/btherani/BL5300/Weekly_assignment_5/N2_R1.cutadapt.fastq']
+      right reads: ['/home/campus29/btherani/BL5300/Weekly_assignment_5/N2_R2.cutadapt.fastq']
+      interlaced reads: not specified
+      single reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed (with gzip)
+Assembly parameters:
+  k: [21, 51, 71, 91, 111, 127]
+  Repeat resolution is enabled
+  Mismatch careful mode is turned ON
+  MismatchCorrector will be used
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /home/campus29/btherani/BL5300/Weekly_assignment_5/N2_spades_output/tmp
+  Threads: 16
+  Memory limit (in Gb): 250
+
+
+======= SPAdes pipeline started. Log can be found here: /home/campus29/btherani/BL5300/Weekly_assignment_5/N2_spades_output/spades.log
+
+
+===== Read error correction started.
+
+
+== Running read error correction tool: /home/campus29/btherani/miniconda3/envs/de_novo/share/spades-3.11.1-3/bin/hammer /home/campus29/btherani/BL5300/Weekly_assignment_5/N2_spades_output/corrected/configs/config.info
+
+  0:00:00.000     4M / 4M    INFO    General                 (main.cpp                  :  83)   Starting BayesHammer, built from N/A, git revision N/A
+  0:00:00.001     4M / 4M    INFO    General                 (main.cpp                  :  84)   Loading config from /home/campus29/btherani/BL5300/Weekly_assignment_5/N2_spades_output/corrected/configs/config.info
+  0:00:00.004     4M / 4M    INFO    General                 (memory_limit.hpp          :  51)   Memory limit set to 250 Gb
+  0:00:00.004     4M / 4M    INFO    General                 (main.cpp                  :  93)   Trying to determine PHRED offset
+  0:00:00.005     4M / 4M    INFO    General                 (main.cpp                  :  99)   Determined value is 33
+  0:00:00.005     4M / 4M    INFO    General                 (hammer_tools.cpp          :  36)   Hamming graph threshold tau=1, k=21, subkmer positions = [ 0 10 ]
+  0:00:00.005     4M / 4M    INFO    General                 (main.cpp                  : 120)   Size of aux. kmer data 24 bytes
+     === ITERATION 0 begins ===
+  0:00:00.008     4M / 4M    INFO   K-mer Index Building     (kmer_index_builder.hpp    : 289)   Building kmer index
+  0:00:00.008     4M / 4M    INFO    General                 (kmer_index_builder.hpp    : 106)   Splitting kmer instances into 256 buckets using 16 threads. This might take a while.
+  0:00:00.008     4M / 4M    INFO    General                 (file_limit.hpp            :  32)   Open file limit set to 1024
+  0:00:00.008     4M / 4M    INFO    General                 (kmer_splitters.hpp        :  74)   Memory available for splitting buffers: 5.20825 Gb
+  0:00:00.008     4M / 4M    INFO    General                 (kmer_splitters.hpp        :  82)   Using cell size of 262144
+  0:00:00.064     8G / 8G    INFO   K-mer Splitting          (kmer_data.cpp             :  96)   Processing /home/campus29/btherani/BL5300/Weekly_assignment_5/N2_R1.cutadapt.fastq
+  0:00:14.228     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 106)   Processed 2529958 reads
+  0:00:27.043     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 106)   Processed 5035371 reads
+  0:00:29.364     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 106)   Processed 5268940 reads
+  0:00:29.364     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             :  96)   Processing /home/campus29/btherani/BL5300/Weekly_assignment_5/N2_R2.cutadapt.fastq
+  0:00:42.458     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 106)   Processed 7957097 reads
+  0:00:55.692     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 106)   Processed 10537880 reads
+  0:00:55.692     8G / 9G    INFO   K-mer Splitting          (kmer_data.cpp             : 111)   Total 10537880 reads processed
+  0:00:56.667    64M / 9G    INFO    General                 (kmer_index_builder.hpp    : 109)   Starting k-mer counting.
+=== Stack Trace ===
+/home/campus29/btherani/miniconda3/envs/de_novo/share/spades-3.11.1-3/bin/hammer(_ZN5utils16print_stacktraceEv+0x3f) [0x43816f]
+/home/campus29/btherani/miniconda3/envs/de_novo/share/spades-3.11.1-3/bin/hammer(_ZN5utils15KMerDiskCounterI3SeqILm21EmENS_17kmer_index_traitsIS2_EEE10MergeKMersERKSsS7_j+0x1c9) [0x47af29]
+/home/campus29/btherani/miniconda3/envs/de_novo/share/spades-3.11.1-3/bin/hammer() [0x46ba90]
+/home/campus29/btherani/miniconda3/envs/de_novo/share/spades-3.11.1-3/bin/../../../lib/libgomp.so.1(+0x146d5) [0x7faa57b086d5]
+/lib64/libpthread.so.0(+0x7ea5) [0x7faa57397ea5]
+/lib64/libc.so.6(clone+0x6d) [0x7faa570c08cd]
+hammer: /opt/conda/conda-bld/spades_1543556072162/work/src/common/utils/kmer_mph/kmer_index_builder.hpp:197: size_t utils::KMerDiskCounter<Seq, traits>::MergeKMers(const string&, const string&, unsigned int) [with Seq = Seq<21ul>; traits = utils::kmer_index_traits<Seq<21ul> >; size_t = long unsigned int; std::string = std::basic_string<char>]: Assertion `std::is_sorted(beg, end, adt::array_less<typename Seq::DataType>())' failed.
+
+
+== Error ==  system call for: "['/home/campus29/btherani/miniconda3/envs/de_novo/share/spades-3.11.1-3/bin/hammer', '/home/campus29/btherani/BL5300/Weekly_assignment_5/N2_spades_output/corrected/configs/config.info']" finished abnormally, err code: -6
+
+In case you have troubles running SPAdes, you can write to spades.support@cab.spbu.ru
+or report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.
+(de_novo) [btherani@colossus Weekly_assignment_5]$
