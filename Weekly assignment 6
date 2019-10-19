@@ -1,0 +1,58 @@
+(base) [btherani@colossus ~]$ cd /scratch_30_day_tmp/btherani
+(base) [btherani@colossus btherani]$ mkdir Weekly_assignment_6
+(base) [btherani@colossus btherani]$ cd Weekly_assignment_6
+(base) [btherani@colossus Weekly_assignment_6]$ wget https://github.com/stechtmann/BL4300-5300/raw/master/data/Weekly_Assignment_data/Unk_therm.faa
+--2019-10-19 15:37:56--  https://github.com/stechtmann/BL4300-5300/raw/master/data/Weekly_Assignment_data/Unk_therm.faa
+Resolving github.com (github.com)... 140.82.113.4
+Connecting to github.com (github.com)|140.82.113.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/data/Weekly_Assignment_data/Unk_therm.faa [following]
+--2019-10-19 15:37:56--  https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/data/Weekly_Assignment_data/Unk_therm.faa
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.184.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.184.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 706617 (690K) [text/plain]
+Saving to: ‘Unk_therm.faa’
+
+100%[======================================>] 706,617     --.-K/s   in 0.1s
+
+2019-10-19 15:37:56 (5.56 MB/s) - ‘Unk_therm.faa’ saved [706617/706617]
+
+(base) [btherani@colossus Weekly_assignment_6]$ makeblastdb -in Unk_therm.faa -dbtype prot -title Unk_therm
+
+Building a new DB, current time: 10/19/2019 15:39:36
+New DB name:   /var/tmp/scratch/btherani/Weekly_assignment_6/Unk_therm.faa
+New DB title:  Unk_thermo_prot
+Sequence type: Protein
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 2286 sequences in 0.0418351 seconds.
+(base) [btherani@colossus Weekly_assignment_6]$ wget https://github.com/stechtmann/BL4300-5300/raw/master/data/Weekly_Assignment_data/HSP_prot.fasta
+--2019-10-19 15:39:59--  https://github.com/stechtmann/BL4300-5300/raw/master/data/Weekly_Assignment_data/HSP_prot.fasta
+Resolving github.com (github.com)... 140.82.114.4
+Connecting to github.com (github.com)|140.82.114.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/data/Weekly_Assignment_data/HSP_prot.fasta [following]
+--2019-10-19 15:40:00--  https://raw.githubusercontent.com/stechtmann/BL4300-5300/master/data/Weekly_Assignment_data/HSP_prot.fasta
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.184.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.184.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3600 (3.5K) [text/plain]
+Saving to: ‘HSP_prot.fasta’
+
+100%[======================================>] 3,600       --.-K/s   in 0s
+
+2019-10-19 15:40:00 (30.7 MB/s) - ‘HSP_prot.fasta’ saved [3600/3600]
+
+(base) [btherani@colossus Weekly_assignment_6]$ ls
+HSP_prot.fasta  Unk_therm.faa.phr  Unk_therm.faa.psq
+Unk_therm.faa   Unk_therm.faa.pin
+(base) [btherani@colossus Weekly_assignment_6]$ blastp -db Unk_therm.faa -query HSP_prot.fasta -out Thermo_BLAST.txt -outfmt 7
+(base) [btherani@colossus Weekly_assignment_6]$ LS
+-bash: LS: command not found
+(base) [btherani@colossus Weekly_assignment_6]$ ls
+HSP_prot.fasta    Unk_therm.faa      Unk_therm.faa.pin
+Thermo_BLAST.txt  Unk_therm.faa.phr  Unk_therm.faa.psq
+(base) [btherani@colossus Weekly_assignment_6]$ less Thermo_BLAST.txt
+
+[1]+  Stopped                 less Thermo_BLAST.txt
