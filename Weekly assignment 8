@@ -1,0 +1,45 @@
+library("tidyverse")
+
+head(WA_counts)
+head(WA8_Metadata)
+
+setwd("~/Assignment 8")
+
+wac<-read_csv("WA_counts.csv")
+wameta<-read_csv("WA8_Metadata.csv")
+
+wac<-as.data.frame(wac)
+wameta<-as.data.frame(wameta)
+
+class(wac)
+class(wameta)
+
+all(names(wac)[-1]==wameta$id)
+
+W8_dds <- DESeqDataSetFromMatrix(countData=wac,
+                                 colData=wameta,
+                                 design=~dex,
+                                 tidy=TRUE)
+W8_dds
+dds <- DESeq(W8_dds)
+
+WA_ans <- results(dds, tidy=TRUE)
+
+WA_ans <- tbl_df(WA_ans)
+WA_ans
+
+class(WA_ans)
+
+WA_ans2 <- arrange(WA_ans, padj)
+
+WA_ans3 <- filter(WA_ans2, padj<=0.05 & log2FoldChange>=2)
+
+WA_ans4 <- filter(WA_ans2, padj<=0.05 & log2FoldChange<=-2)
+
+WA_ans<-mutate(WA_ans,significance=ifelse(padj<0.05,"Significant","Non-significant"))
+
+WA_ans2<-mutate(WA_ans2,significance=ifelse(padj<0.05,"Significant","Non-significant"))
+
+WA_ans3<-mutate(WA_ans3,significance=ifelse(padj<0.05,"Significant","Non-significant"))
+
+WA_ans4<-mutate(WA_ans4,significance=ifelse(padj<0.05,"Significant","Non-significant"))
