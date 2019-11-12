@@ -1,9 +1,9 @@
 library("tidyverse")
 
+setwd("~/Assignment 8")
+
 head(WA_counts)
 head(WA8_Metadata)
-
-setwd("~/Assignment 8")
 
 wac<-read_csv("WA_counts.csv")
 wameta<-read_csv("WA8_Metadata.csv")
