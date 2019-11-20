@@ -10,3 +10,19 @@ ggplot(WA_ans) +
         axis.title = element_text(size = rel(1.25)))  +
   theme_bw()
 
+
+
+
+
+plotCounts(dds, gene="Solyc09g089500.2.1", intgroup="dex", returnData=TRUE) %>%
+  ggplot(aes(dex,count))+
+  geom_boxplot(aes(fill=dex))+
+  scale_y_log10() + 
+  ggtitle("Solyc09g089500.2.1")
+
+
+plotCounts(dds, gene="Solyc11g028040.1.1", intgroup="dex", returnData=TRUE) %>%
+  ggplot(aes(dex,count))+
+  geom_boxplot(aes(fill=dex))+
+  scale_y_log10() + 
+  ggtitle("Solyc11g028040.1.1")
