@@ -1,6 +1,8 @@
 
+WA_ans<-mutate(WA_ans,up=ifelse(log2FoldChange>0,"Up-regulated","Down-regulated"))
+
 ggplot(WA_ans) +
-  geom_point(aes(x=log2FoldChange, y=-log10(padj), colour=significance)) +
+  geom_point(aes(x=log2FoldChange, y=-log10(padj), colour=up)) +
   ggtitle("overexpression") +
   xlab("log2 fold change") + 
   ylab("-log10 adjusted p-value") +
@@ -9,9 +11,6 @@ ggplot(WA_ans) +
         plot.title = element_text(size = rel(1.5), hjust = 0.5),
         axis.title = element_text(size = rel(1.25)))  +
   theme_bw()
-
-
-
 
 
 plotCounts(dds, gene="Solyc09g089500.2.1", intgroup="dex", returnData=TRUE) %>%
@@ -26,3 +25,15 @@ plotCounts(dds, gene="Solyc11g028040.1.1", intgroup="dex", returnData=TRUE) %>%
   geom_boxplot(aes(fill=dex))+
   scale_y_log10() + 
   ggtitle("Solyc11g028040.1.1")
+
+
+ggplot(WA_ans) +
+  geom_point(aes(x=log2(WA_ans$baseMean), y=log2FoldChange)) +
+  ggtitle("MA plot") +
+  xlab("Mean") + 
+  ylab("Fold change") +
+  #scale_y_continuous(limits = c(0,50)) +
+  theme(legend.position = "none",
+        plot.title = element_text(size = rel(0.5), hjust = 0.5),
+        axis.title = element_text(size = rel(0.25)))  +
+  theme_bw()
